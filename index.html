@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Mejorar Plan</title>
+</head>
+<body>
+    <h1>Nuevos Planes</h1>
+
+    <div class="container">
+        <div class="standard">
+            <h2>Plan Standard</h2>
+            <div class="imagenesgratuito">
+                <img src="ImagenesYarapplus/LOGOYARAgratuito.png" alt="LogoGratuito">
+            </div>
+            <div class="reseñas1">
+                <img src="ImagenesYarapplus/reseñasgratuito.png" alt="Reseñas Gratuito">
+            </div>
+            <p>Plan gratis</p>
+            <div class="descargas1">
+                <p>Play Store | GitHub/Yara</p>
+            </div>
+            <div class="descripcion1">
+                <p>Comentar solo 20 post veces al día.</p>
+                <p>Crear un usuario.</p>
+                <p>Información en tiempo real.</p>
+                <p>Publicidad cada 30 minutos.</p>
+            </div>
+            <div class="submit">
+                <button type="button" class="btn" onclick="mostrarFormulario()">Comprar</button>
+            </div>
+        </div>
+        <div class="plus">
+            <h2>Plan Plus</h2>
+            <div class="imagenesplus">
+                <img src="ImagenesYarapplus/LogoPLUSYARA.png" alt="LogoPlus">
+            </div>
+            <div class="reseñas2">
+                <img src="ImagenesYarapplus/reseñasplus.png" alt="Reseñas Plus">
+            </div>
+            <p>Desde PEN 15 por mes</p>
+            <div class="descargas2">
+                <p>Play Store | GitHub/Yara</p>
+            </div>
+            <div class="descripcion2">
+                <p>Comentar de forma ilimitada.</p>
+                <p>Crear varios usuarios.</p>
+                <p>Información en tiempo real.</p>
+                <p>Navegación sin publicidad.</p>
+                <p>Acceso a chats privados.</p>
+                <p>Visualizar perfil de usuarios.</p>
+                <p>Poder participar en eventos especiales.</p>
+            </div>
+            <div class="submit2">
+                <button type="button" class="btn" onclick="mostrarFormulario()">Comprar</button>
+            </div>
+        </div>
+
+        <div id="miModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <h2>Ingresa tus datos de pago</h2>
+                <div class="yarasinlogo">
+                    <img src="ImagenesYarapplus/yarasinfondo.png" alt="">
+                </div>
+                <div class="datos-pagar">
+                    <form id="formularioPago" onsubmit="return validarFormulario(event)" action="/formulario" method="POST"><br>
+                        <label for="nombre">Nombre en la tarjeta</label><br>
+                        <input type="text" id="nombre" name="nombre" required><br>
+                        <label for="numero">Número de la tarjeta</label><br>
+                        <input type="text" id="numero" name="numero" pattern="\d{16}" maxlength="16" required><br>
+                        <label for="vencimiento">Fecha de vencimiento</label><br>
+                        <input type="text" id="vencimiento" name="vencimiento" required><br>
+                        <label for="cvv">CVV</label><br>
+                        <input type="text" id="cvv" name="cvv" pattern="\d{3}" maxlength="3" required><br><br>
+                        <button type="submit" class="btn">Pagar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="funciones.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #edebe9;
+}
+
+h1 {
+    text-align: center;
+    padding: 4% 0 4% 0;
+    font-size: 4rem;
+    font-family: "Permanent Marker", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    margin: 0 20% 0 20%;
+}
+
+/* Versión Gratuita */
+
+.standard {
+    margin: 0 0 0 70px;
+    width: 35%;
+    min-height: 42rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    background: #d4e9e280;
+}
+
+.standard h2 {
+    text-align: center;
+    padding: 4% 0 4% 0;
+    font-size: 2rem;
+    font-family: "Signika Negative", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.standard .imagenesgratuito {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
+}
+
+.standard .imagenesgratuito img {
+    width: 80px;
+}
+
+.standard .reseñas1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.standard .reseñas1 img {
+    border-radius: 80px;
+}
+
+.standard p {
+    padding: 2%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.standard .descargas1 p {
+    padding: 0 2% 2% 2%;
+}
+
+.standard .descargas1 {
+    padding: 5px 0 15px 20px;
+}
+
+.standard .descripcion1 {
+    padding: 5px 0 20px 20px;
+}
+
+.standard .descripcion1 p {
+    margin-left: 5%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.standard .submit {
+    display: flex;
+    justify-content: center;
+    padding-top: 20.5%;
+}
+
+.standard .btn {
+    width: 90%;
+    /*padding: 0 2% 0 2%;*/
+    min-height: 45px;
+    background: #006241;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #e9ecef;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.standard .btn:hover {
+    background: black;
+    transition: all 0.3s ease;
+}
+
+/* Versiónn de Paga */
+
+.plus {
+    margin: 0 70px 0 0;
+    width: 35%;
+    min-height: 42rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    background: #d4e9e280;
+}
+
+.plus h2 {
+    text-align: center;
+    padding: 4% 0 4% 0;
+    font-size: 2rem;
+    font-family: "Signika Negative", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.plus .imagenesplus {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
+}
+
+.plus .imagenesplus img {
+    width: 80px;
+}
+
+.plus .reseñas2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+
+.plus .reseñas2 img {
+    border-radius: 80px;
+}
+
+.plus p {
+    padding: 2% 0 2% 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.plus .descargas2 p {
+    padding: 0 2% 2% 2%;
+}
+
+.plus .descripcion2 {
+    padding: 5px 0 15px 20px;
+}
+
+.plus .descripcion2 p {
+    margin-left: 5%;
+    text-align: left;
+    font-size: 18px;
+}
+
+.plus .submit2 {
+    display: flex;
+    justify-content: center;
+    /*padding-top: 10%;*/
+}
+
+.plus .btn {
+    width: 90%;
+    /*padding: 0 2% 0 2%;*/
+    min-height: 45px;
+    background: #006241;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #e9ecef;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.plus .btn:hover {
+    background: black;
+    transition: all 0.3s ease;
+}
+
+/* Para el Javascript */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #021a1e;
+    margin: 3% auto;
+    padding: 20px;
+    border: 2px solid #888;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+    text-align: left;
+    color: #e9ecef;
+}
+
+.modal-content h2 {
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", serif;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal .modal-content .yarasinlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content img {
+    width: 300px;
+    padding: 1% 0 1% 0;
+}
+
+.modal-content .datos-pagar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/*
+.datos-pagar {
+    background-color: #006241;
+}
+*/
+
+
+.datos-pagar form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.datos-pagar label {
+    font-size: 20px;
+    font-family: "Poppins", serif;
+    margin: -10px;
+}
+
+.datos-pagar input {
+    height: 30px;
+    width: 70%;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(200, 255, 200, .1);
+    border: none;
+    outline: none;
+    color: #eee;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.datos-pagar .btn {
+    margin-bottom: 5%;
+    width: 100%;
+    height: 50px;
+    background-color: #d9ba55;
+    color: #e9ecef;
+    border: none;
+    box-shadow: 0 0 30px rgba(200, 200, 0, .4);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.datos-pagar .btn:hover {
+    background: #006241;
+    transition: all 0.3s ease;
+}
