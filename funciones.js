@@ -25,6 +25,10 @@ function validarFormulario(event) {
     }
 }
 
+document.getElementById('boton').addEventListener('click', function() {
+    window.location.href = 'https://alcon-72.github.io/Progresi-n-Generaci-n/';
+});
+
 function procesarPago() {
     var modal = document.getElementById("miModal");
     modal.style.display = "none";
@@ -34,11 +38,4 @@ function procesarPago() {
         icon: 'success',
         confirmButtonText: 'Aceptar'
     });
-}
-
-window.onclick = function(event) {
-    var modal = document.getElementById("miModal");
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
 }
