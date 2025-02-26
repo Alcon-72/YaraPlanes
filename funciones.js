@@ -15,7 +15,8 @@ function validarFormulario(event) {
     
     if (/^\d{16}$/.test(numero) && /^\d{3}$/.test(cvv)) {
         procesarPago();
-    } else {
+    }
+    else {
         Swal.fire({
             title: 'Error',
             text: 'Por favor, introduce un numero correcto.',
@@ -32,10 +33,16 @@ document.getElementById('boton').addEventListener('click', function() {
 function procesarPago() {
     var modal = document.getElementById("miModal");
     modal.style.display = "none";
-    Swal.fire({
-        title: '¡Felicidades!',
-        text: 'Gracias por tu compra.',
-        icon: 'success',
-        confirmButtonText: 'Aceptar'
-    });
+    
+    if (/^\d{16}$/.test(numero) && /^\d{3}$/.test(cvv)) {
+        procesarPago();
+    }
+    else {
+        Swal.fire({
+            title: '¡Felicidades!',
+            text: 'Gracias por tu compra.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        })
+    }
 }
