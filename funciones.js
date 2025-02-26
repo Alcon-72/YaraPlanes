@@ -19,7 +19,7 @@ function validarFormulario(event) {
     else {
         Swal.fire({
             title: 'Error',
-            text: 'Por favor, introduce un numero correcto.',
+            text: 'Por favor, Completa la información.',
             icon: 'error',
             confirmButtonText:'Aceptar'
         })
